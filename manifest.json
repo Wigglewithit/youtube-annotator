@@ -2,23 +2,28 @@
   "manifest_version": 3,
   "name": "YouTube Annotator",
   "version": "1.0",
-  "description": "Add timestamped annotations directly on YouTube.",
-  "author": "Matthew Becknell",
-  "homepage_url": "https://github.com/wigglewithit/youtube-annotator",
+  "description": "Add timestamped annotations directly on YouTube videos with in-page editing and export/import support.",
+  "author": "Wigglewithit",
   "permissions": ["storage", "scripting", "activeTab"],
   "host_permissions": ["*://*.youtube.com/*"],
-  "content_scripts": [
-    {
-      "matches": ["*://*.youtube.com/*"],
-      "js": ["content.js"]
-    }
-  ],
   "action": {
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",
       "48": "icons/icon48.png",
       "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "youtube-annotator@wigglewithit.com",
+      "strict_min_version": "109.0"
     }
   }
 }
