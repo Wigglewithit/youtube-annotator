@@ -1,0 +1,19 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore zip files or build outputs
+*.zip
+
+# Node/npm tools if used
+node_modules/
+
+# Ignore JetBrains/PyCharm IDE metadata
+.idea/
+
+# Ignore log files
+*.log
+
+# Ignore anything not relevant to core extension
+*.bak
+*.swp
